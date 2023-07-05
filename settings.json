@@ -1,28 +1,43 @@
-// vscode with powerline and cmder on windows
-// https://github.com/AmrEldib/cmder-powerline-prompt
 {
-    "python.pythonPath": "C:\\tools\\miniconda3\\python.exe",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    "terminal.integrated.env.windows": {
-        "CMDER_ROOT": "C:\\tools\\Cmder"
+    "vim.leader": " ",
+    "vim.useCtrlKeys": true,
+    "vim.insertModeKeyBindings": [{
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+    }], 
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["leader", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility",]
         },
-        "terminal.integrated.shellArgs.windows": [
-          "/k",
-          "C:\\tools\\Cmder\\vendor\\init.bat &",
-          "C:\\tools\\miniconda3\\Scripts\\activate.bat",
-          "C:\\tools\\miniconda3",
-        ],
-        "window.zoomLevel": 1,
-        "workbench.iconTheme": "material-icon-theme",
-        "terminal.integrated.cursorStyle": "line",
-        "terminal.integrated.fontFamily": "Anonymous Pro for Powerline",
-        "terminal.integrated.cursorBlinking": true,
-        "python.linting.flake8Enabled": true,
-        "files.insertFinalNewline": true,
-        "files.trimTrailingWhitespace": true,
-        "files.autoSave": "afterDelay",
-        "files.autoSaveDelay": 500,
-        "files.trimFinalNewlines": true,
-        "python.jediEnabled": false,
-        "terminal.integrated.inheritEnv": true,
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save",]
+        },
+        {
+            "before": ["leader", "t"],
+            "commands": [
+                "workbench.action.terminal.focus",
+            ]
+        },
+        {
+            "before": ["<C-k>", "<C-o>"],
+            "commands": [
+                "workbench.action.files.openFolder"
+            ]
+        },
+        {
+            "before": ["leader", "o"],
+            "commands": ["workbench.action.files.openFile"]
+        }
+    ],
+    "vim.handleKeys": {
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-j>": false,
+  }
+
 }
+ 
